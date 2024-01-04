@@ -33,6 +33,8 @@ return {
         "tailwindcss",
         "lua_ls",
         "gopls",
+        "intelephense",
+        "volar",
       },
       -- auto-install configured servers (with lspconfig)
       automatic_installation = true, -- not the same as ensure_installed
@@ -40,9 +42,10 @@ return {
 
     mason_tool_installer.setup({
       ensure_installed = {
-        "prettier", -- prettier formatter
-        "stylua", -- lua formatter
+        "prettierd", -- prettierd formatter
+        "stylua",   -- lua formatter
         "eslint_d", -- js linter
+        "php-cs-fixer", -- php formatter
       },
     })
   end,
