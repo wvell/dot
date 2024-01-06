@@ -1,16 +1,5 @@
 local wk = require("which-key")
 
--- window management
-wk.register({
-	w = {
-		name = "Windows",
-		v = { "<C-w>v", "Split window vertically" },
-		h = { "<C-w>s", "Split window horizontally" },
-		e = { "<C-w>=", "Make splits equal size" },
-		x = { "<cmd>close<CR>", "Close current split" },
-	},
-}, { prefix = "<leader>" })
-
 -- Tab management
 wk.register({
 	t = {
