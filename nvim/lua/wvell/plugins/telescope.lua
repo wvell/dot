@@ -23,6 +23,11 @@ return {
 					},
 				},
 			},
+			pickers = {
+				find_files = {
+					hidden = true,
+				},
+			},
 		})
 
 		telescope.load_extension("fzf")
@@ -30,17 +35,27 @@ return {
 		-- set keymaps
 		local keymap = vim.keymap -- for conciseness
 
-		keymap.set("n", "<leader>ff", "<cmd>Telescope find_files theme=ivy<cr>", { desc = "Fuzzy find files in cwd" })
+		keymap.set(
+			"n",
+			"<leader>ff",
+			"<cmd>Telescope find_files hidden=true theme=ivy<cr>",
+			{ desc = "Fuzzy find files in cwd" }
+		)
 		keymap.set("n", "<leader>fr", "<cmd>Telescope oldfiles theme=ivy<cr>", { desc = "Fuzzy find recent files" })
-		keymap.set("n", "<leader>fs", "<cmd>Telescope live_grep theme=ivy<cr>", { desc = "Find string in cwd" })
+		keymap.set(
+			"n",
+			"<leader>fs",
+			"<cmd>Telescope live_grep hidden=true theme=ivy<cr>",
+			{ desc = "Find string in cwd" }
+		)
 		keymap.set(
 			"n",
 			"<leader>fc",
-			"<cmd>Telescope grep_string theme=ivy<<cr>",
+			"<cmd>Telescope grep_string hidden=true theme=ivy<cr>",
 			{ desc = "Find string under cursor in cwd" }
 		)
 		keymap.set("n", "<leader>,", "<cmd>Telescope buffers theme=ivy<cr>", { desc = "Switch buffers" })
 		keymap.set("n", "`", "<cmd>Telescope marks theme=ivy<cr>", { desc = "Switch marks" })
-		keymap.set("n", "<C-`>", "<cmd>Telescope quickfix theme=ivy<cr>", { desc = "Switch marks" })
+		keymap.set("n", "~", "<cmd>Telescope jumplist theme=ivy<cr>", { desc = "Switch marks" })
 	end,
 }
