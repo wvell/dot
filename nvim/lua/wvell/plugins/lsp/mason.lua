@@ -46,6 +46,7 @@ return {
         "stylua",   -- lua formatter
         "eslint_d", -- js linter
         "php-cs-fixer", -- php formatter
+        "goimports", -- go formatter
       },
     })
   end,
