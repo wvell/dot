@@ -74,7 +74,7 @@ return {
 			filetypes = { "go", "gomod", "gowork", "gotmpl" },
 			settings = {
 				gopls = {
-					usePlaceholders = true,
+					usePlaceholders = false,
 					analyses = {
 						unusedparams = true,
 					},
